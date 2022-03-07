@@ -1,0 +1,20 @@
+body{
+    background-color:lightsteelblue;
+
+}
+
+h1{
+    color:darkblue;
+    text-align: center;
+    font-size: 50px;
+}
+
+div{
+    display: grid;
+}
+img{
+    
+align-self: center;
+justify-self: center;
+    
+}
