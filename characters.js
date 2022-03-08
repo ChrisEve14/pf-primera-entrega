@@ -1,4 +1,5 @@
-const characters = [];
+let characters = [];
+console.log(characters.length);
 
 const names = () => {
 
@@ -31,4 +32,9 @@ const names = () => {
 
 names()
 names()
+
+
+const title = document.querySelector('#title')
+console.log(title.innerText);
+title.innerText = 'Welcome to Fictionized'
 
