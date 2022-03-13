@@ -19,3 +19,16 @@ justify-self: center;
 width: 500px;
     
 }
+
+.character{
+    justify-content: center;
+    padding: 10px;
+    margin: 50px;
+    width: 17%;
+    border: double;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: darkblue;
+    border-spacing: 5px;
+
+}

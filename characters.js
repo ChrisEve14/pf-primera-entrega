@@ -9,42 +9,50 @@ saludar();
 const title = document.querySelector('#title')
 title.innerText = 'Welcome to Fictionized'
 
-const ppl = document.getElementById('ppl')
+const btn = document.getElementById('botonUno')
 
-const newLi = document.createElement('li')
-newLi.innerText = "Character two";
-ppl.append(newLi)
-
-
-function Character( name, power, color ) {
-        this.name = name;
-        this.power = power;
-        this.color = color;
-    
+const entrada = document.getElementById('entradaUno')
+entrada.oninput = () => {
+    console.log('Ingreso Nombre');
 }
 
-let characters = [];
+btn.onclick = ()=>{
+    console.log(entrada.value);
 
-let character = () => {
+    const ppl = document.getElementById('ppl')
 
-    let nameC = prompt('Pick a name for your character')
-    let powerC = prompt('Pick a power for your character')
-    let colorC = prompt('Pick a color for your character')
-    
-    const characterPicked = new Character (nameC, powerC, colorC)
-    
-    console.log(characterPicked);
+    const newLi = document.createElement('li')
+    newLi.innerText = `${entrada.value}`;
+    ppl.append(newLi)
+}
 
-    characters.push(characterPicked)
-    
-    }
+const btnone = document.getElementById('botonDos')
 
-character()
-character()
+const entradau = document.getElementById('entradaDos')
+entradau.oninput = () => {
+    console.log('Selecciono opcion');
+}
 
-const colores = characters.find((x) => x.color === "red")
-console.log(colores);
+btnone.onclick = ()=>{
+    console.log(entradau.value);
+}
 
-const colors = characters.filter((x) => x.color === 'yellow')
-console.log(colors);
+const btntwo = document.getElementById('botonTres')
+
+const entradad = document.getElementById('entradaTres')
+entradad.oninput = () => {
+    console.log('Ingreso Color');
+}
+
+btntwo.onclick = ()=>{
+    console.log(entradad.value);
+
+    const color = [entradad.value]
+
+    const encontrar = color.find((x) => `${entradad.value}` === 'Red')
+    console.log(encontrar);
+
+    const filtrar = color.filter((x) => `${entradad.value}` === 'Yellow')
+    console.log(filtrar);
+}
 
