@@ -29,6 +29,7 @@ btn.onclick = () => {
 
    
     const valueBtn = btn.value;
+
     
     const entrada = document.getElementById('entradaUno')
     entrada.oninput = () => {
@@ -51,10 +52,27 @@ btn.onclick = () => {
 
     
     if(valueBtn.trim()){
-        characters.push(valueBtn)
+        characters.push(personajes)
         btn.value = '';
         renderCharacters()
         localStorage.setItem('characters', JSON.stringify(characters))
+    }
+
+    
+function Personaje( nam, pow, col ) {
+    this.name = nam;
+    this.age = pow;
+    this.country = col;
+}
+
+let personajes = () => {
+
+    let nam = entrada.value
+    let pow = entradau.value
+    let col = entradad.value
+    
+    const perso =  new Personaje ( nam, pow, col)
+    
     }
 
         
