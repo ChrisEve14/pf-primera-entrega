@@ -52,29 +52,16 @@ btn.onclick = () => {
 
     
     if(valueBtn.trim()){
-        characters.push(personajes)
+        characters.push(valueBtn)
         btn.value = '';
         renderCharacters()
         localStorage.setItem('characters', JSON.stringify(characters))
     }
 
-    
-function Personaje( nam, pow, col ) {
-    this.name = nam;
-    this.age = pow;
-    this.country = col;
-}
-
-let personajes = () => {
-
-    let nam = entrada.value
-    let pow = entradau.value
-    let col = entradad.value
-    
-    const perso =  new Personaje ( nam, pow, col)
-    
-    }
-
+    let perso = [`${entrada.value.toUpperCase()} - ${entradau.value.toUpperCase()} - ${entradad.value.toUpperCase()}`]
+    console.log(perso);
+    characters.push(perso)
+    localStorage.setItem('characters', JSON.stringify(characters))
         
     const color = [entradad.value]
 
