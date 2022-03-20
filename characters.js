@@ -1,10 +1,10 @@
 
-// function saludar () {
-//     alert ('Welcome to Fictionized');
-//     console.log('Welcome');
-// }
+function saludar () {
+    alert ('Welcome to Fictionized');
+    console.log('Welcome');
+}
 
-// saludar();
+saludar();
 
 const title = document.querySelector('#title')
 title.innerText = 'Welcome to Fictionized'
@@ -54,9 +54,13 @@ btn.onclick = () => {
     if(valueBtn.trim()){
         characters.push(valueBtn)
         btn.value = '';
-        renderCharacters()
         localStorage.setItem('characters', JSON.stringify(characters))
     }
+
+    const ppl = document.getElementById('ppl')
+    const nLi = document.createElement('li')
+    nLi.innerText = `${entrada.value.toUpperCase()} - ${entradau.value.toUpperCase()} - ${entradad.value.toUpperCase()}`
+    ppl.append (nLi)
 
     let perso = [`${entrada.value.toUpperCase()} - ${entradau.value.toUpperCase()} - ${entradad.value.toUpperCase()}`]
     console.log(perso);
@@ -79,8 +83,7 @@ btn.onclick = () => {
 
 function renderCharacters() {
     const ppl = document.getElementById('ppl')
-    ppl.innerHTML = '';
-
+   
     for (const character of characters) {
         const newLi = document.createElement('li')
         newLi.textContent = character
