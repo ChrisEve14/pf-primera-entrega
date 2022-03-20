@@ -1,10 +1,5 @@
+console.log('Welcome');
 
-function saludar () {
-    alert ('Welcome to Fictionized');
-    console.log('Welcome');
-}
-
-saludar();
 
 const title = document.querySelector('#title')
 title.innerText = 'Welcome to Fictionized'
