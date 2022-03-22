@@ -6,15 +6,18 @@ title.innerText = 'Welcome to Fictionized'
 
 //consola de eleccion
 
-const storedCharacters = localStorage.getItem('characters')
+// const storedCharacters = localStorage.getItem('characters')
 
-let characters = []
-console.log(localStorage.getItem('characters'));
+// let characters = []
+// console.log(localStorage.getItem('characters'));
 
-if(storedCharacters) {
-    characters = JSON.parse(storedCharacters);
+// if(storedCharacters) {
+//     characters = JSON.parse(storedCharacters);
 
-}
+// }
+
+// Operador lógico OR - optimizando código con operadores avanzados
+const characters = JSON.parse(localStorage.getItem('characters')) || []
 
 renderCharacters()
 
